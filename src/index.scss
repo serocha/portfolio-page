@@ -1,0 +1,102 @@
+$font-color: #013a45;
+$intro-color: #fffefa;
+$size-xs: 1rem;
+$size-sm: 1.125rem;
+$size-md: 1.25rem;
+$size-lg: 1.375rem;
+$size-xl: 1.5rem;
+  
+@mixin size($mult: 1) {
+    
+  font-size: $size-xs * $mult;
+  
+  @media (min-width: 576px) {
+    font-size: $size-sm * $mult;
+  }
+
+  @media (min-width: 768px) {
+    font-size: $size-md * $mult;
+  }
+
+  @media (min-width: 992px) {
+    font-size: $size-lg * $mult;
+  }
+
+  @media (min-width: 1200px) {
+    
+    font-size: $size-xl * $mult;
+  }
+}
+
+body {
+  font-family: 'Poppins';
+  @include size();
+  color: #013a45;
+  margin: 0;
+  padding: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#home {
+	text-align: left;
+	background-image: url('https://static.wixstatic.com/media/50bcfa_0f4930b4f23a4103977c8d14e71e02b3~mv2_d_1500_1482_s_2.jpg');
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	height: 100vh;
+  	color: $intro-color;
+
+	@include size(1.15);
+
+	#hi {
+		@include size(1.7);
+	}
+
+	#name {
+		@include size(2.5);
+	}
+}
+
+.title {
+  opacity: 0;
+  @include size(2);
+  
+  padding-top: 15vw;
+  
+  @media (min-width: 576px) {
+    padding-top: 10vw;
+  }
+  @media (min-width: 768px) {
+    padding-top: 7vw;
+  }
+  @media (min-width: 992px) {
+    padding-top: 6vw;
+  }
+  @media (min-width: 1200px) {
+    padding-top: 5vw;
+  }
+
+  transform: translateX(-10vw);
+
+  transition: opacity 0.9s, transform 0.9s;
+
+}
+
+.underline {
+  background-color: $font-color;
+  display: block;
+  margin: auto;
+  opacity: 0;
+  padding: 0;
+  margin-top: 2vh;
+  height: .25rem;
+  width: 6rem;
+
+  transform: translateX(15vw);
+
+  transition: opacity 0.9s, transform 0.9s;
+}
+
+

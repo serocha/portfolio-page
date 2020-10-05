@@ -1,0 +1,36 @@
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes fadeup {
+  0% {transform: translateY(5vh)}
+  100% {opacity: 1; transform: translateY(0)}
+}
+
+.fadeup {
+  animation: fadeup 1s ease 1s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeleft {
+  0% {transform: translateX(-5vw)}
+  100% {opacity: 1; transform: translateX(0)}
+}
+
+.fadeleft {
+  opacity: 0;
+  animation: fadeleft 1s ease 2.5s forwards;
+}
+
+@keyframes faderight {
+  0% {transform: translateX(5vw)}
+  100% {opacity: 1; transform: translateX(0)}
+}
+
+.faderight {
+  opacity: 0;
+  animation: faderight 1s ease 4s forwards;
+}
