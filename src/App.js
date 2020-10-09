@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import './App.scss';
 
 import Splash from './components/Layout/Sections/Splash/Splash';
 import About from './components//Layout/Sections/About/About';
 import Gallery from './components/Layout/Sections/Gallery/Gallery'
 
-class App extends Component {
+import './App.scss';
 
-    
+class App extends Component {
 
     waypoint (classStr, i) {
       let el = document.getElementsByClassName(classStr)[i];

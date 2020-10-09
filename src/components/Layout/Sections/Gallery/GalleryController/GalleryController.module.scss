@@ -4,14 +4,46 @@
 	height: 400px;
 	width: 300px;
 	transform: scale(0,0);
-
-	animation-name: slide;
-	animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+	box-shadow: -2px 4px 2px 1px rgba(0,0,0,.1);
+	animation-name: scale;
+	animation-duration: .7s;
+    animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
 
-@keyframes slide {
-	0% {transform: scale(.5,.5)}
-	100% {transform: scale(1,1)}
+@keyframes scale {
+	0% {transform: scale(.65,.65);
+		box-shadow: -50px 200px 2px 1px rgba(0,0,0,.05);}
+	100% {transform: scale(1,1);
+		box-shadow: -2px 4px 2px 1px rgba(0,0,0,.1);}
+}
+
+.button {
+	margin-top: 5vh;
+	padding: 5px 10px;
+	background-image: linear-gradient(to top right, #ebe7e1, #fcfbf7 );
+	border: none;
+	box-shadow: -3px 3px 3px 1px rgba(0,0,0,.20),
+				4px -4px 3px 1px #fcfbf7;
+	border-radius: 5px;
+}
+
+.button:hover {
+	color: #fcfbf7;
+	background-image: linear-gradient(to top right, #ab2929, #db3030);
+}
+
+.button:active {
+	color: #deddd9;
+	box-shadow: 2px -2px 3px 1px rgba(0,0,0,.10),
+				-5px 5px 3px 1px #fffefa;
+	background-image: linear-gradient(to bottom left, #962323, #c22929);
+}
+
+.button:focus {
+	outline: 0;
+}
+
+.placeholder {
+	height: 150vh;
 }

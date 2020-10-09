@@ -1,4 +1,56 @@
 #about {
-  height: 125vh;
-  background: #f2eee4;
+	padding-bottom: 20vh;
+	background: #f2eee4;
+}
+
+.aboutcontainer {
+	height: 100%;
+}
+
+.aboutme {
+	height: 100%;
+	float: right;
+	margin-top: 5vh;
+
+	@media (min-width: 576px) {
+    	margin-top: 0;
+    	padding-left: 30vw;
+	}
+
+	@media (min-width: 768px) {
+		padding-left: 10vw;
+	}
+
+	@media (min-width: 992px) {
+		padding-left: 5vw;
+	}
+
+	@media (min-width: 1200px) {
+    	padding-right: 10vw;
+    }
+}
+
+
+.mypic {
+	height: 300px;
+	object-fit: cover;
+	width: auto;
+	margin-top: 5vh;
+	box-shadow: -4px 4px 3px rgba(0,0,0,0.1), 5px -5px 3px #f7f4eb;
+	border-radius: 10px 100px;
+	
+
+	@media (min-width: 576px) {
+	    height: 400px;
+	    margin-left: 20%;
+	    box-shadow: -5px 5px 3px rgba(0,0,0,0.1), 6px -6px 3px #f7f4eb;
+  	}
+
+	@media (min-width: 768px) {
+		height: 500px;
+	}
+
+	@media (min-width: 992px) {
+    	margin-left: 10vw;
+    }
 }

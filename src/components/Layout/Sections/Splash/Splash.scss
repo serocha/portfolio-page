@@ -11,7 +11,7 @@
 }
 
 .fadeup {
-  animation: fadeup 1s ease 1s forwards;
+  animation: fadeup 1s ease .5s forwards;
   opacity: 0;
 }
 
@@ -22,7 +22,7 @@
 
 .fadeleft {
   opacity: 0;
-  animation: fadeleft 1s ease 2.5s forwards;
+  animation: fadeleft 1s ease 1.5s forwards;
 }
 
 @keyframes faderight {
@@ -32,5 +32,5 @@
 
 .faderight {
   opacity: 0;
-  animation: faderight 1s ease 4s forwards;
+  animation: faderight 1s ease 3s forwards;
 }
