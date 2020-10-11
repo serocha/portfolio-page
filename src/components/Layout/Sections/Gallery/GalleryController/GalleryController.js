@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 
 import Overlay from './Overlay/Overlay';
 import Modal from '../../../Modal/Modal';
+import PopIn from '../../../Waypoints/PopIn';
 
 import styles from './GalleryController.module.scss';
 
@@ -18,7 +19,7 @@ class galleryController extends Component {
 		images: [
 			{id: 1, theme: 'pet portraits', title: 'Esme', desc: 'acrylic on canvas', src: 'https://static.wixstatic.com/media/50bcfa_0db4c5148e564ece9250ad0c88f28bc7~mv2_d_2287_2943_s_2.jpg'},
 			{id: 2, theme: 'mixed media', title: 'Untitled', desc: 'collage on mixed media paper', src: 'https://static.wixstatic.com/media/50bcfa_dda62a3cd7fd4ad1aad98b126d573ce7~mv2_d_1836_2434_s_2.jpg'},
-			{id: 3, theme: 'pet portraits', title: 'Zeke (Potato) Rosko', desc: 'acrylic on canvas', src: 'https://static.wixstatic.com/media/50bcfa_b11192f57566454abef443464cc9fa3f~mv2_d_2371_3086_s_2.jpg'},
+			{id: 3, theme: 'pet portraits', title: 'Zeke (Potato)', desc: 'acrylic on canvas', src: 'https://static.wixstatic.com/media/50bcfa_b11192f57566454abef443464cc9fa3f~mv2_d_2371_3086_s_2.jpg'},
 			{id: 4, theme: 'mixed media', title: 'Rodents', desc: 'oil on masonite', src: 'https://static.wixstatic.com/media/50bcfa_7a96481eea0643388b90520810636de0~mv2.jpg'},
 			{id: 5, theme: 'pet portraits', title: 'Max', desc: 'acrylic on canvas', src: 'https://static.wixstatic.com/media/50bcfa_9310ca482b8b47f0a04ad9fd338c43bf~mv2_d_1403_1874_s_2.jpg'},
 			{id: 6, theme: 'mixed media', title: 'The way out', desc: 'oil on masonite', src: 'https://static.wixstatic.com/media/50bcfa_bc57a3e1e2ef44fea23a6f45efecb4f0~mv2.jpg'},
@@ -94,14 +95,16 @@ class galleryController extends Component {
 		return (
 			<div>
 				<Modal clicked={this.closeModal} show={this.state.showModal} src={this.state.modalImg} />
-				<Row className='justify-content-center'>
-					<Col xs={3}>
-						<button className={styles.button} onClick={ () => this.imageKeyHandler('pet portraits') } >pet portraits</button>
-					</Col>
-					<Col xs={3}>
-						<button className={styles.button} onClick={ () => this.imageKeyHandler('mixed media') } >mixed media</button>
-					</Col>
-				</Row>
+				<PopIn targetid='gal-buttons' offset='50%'>
+					<Row id='gal-buttons' className='pop-in justify-content-center'>
+						<Col xs={3}>
+							<button className={styles.button} onClick={ () => this.imageKeyHandler('pet portraits') } >pet portraits</button>
+						</Col>
+						<Col xs={3}>
+							<button className={styles.button} onClick={ () => this.imageKeyHandler('mixed media') } >mixed media</button>
+						</Col>
+					</Row>
+				</PopIn>
 				{gallery}
 			</div>		
 		);

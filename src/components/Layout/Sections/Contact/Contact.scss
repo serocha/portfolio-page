@@ -1,0 +1,116 @@
+.contact-lead {
+	width: 0; 
+	height: 0; 
+	border-left: 50vw solid #ab2929;
+	border-right: 50vw solid #ab2929;
+	border-top: 10vh solid #f2eee4;
+
+	z-index: 2;
+}
+
+.contact-main {
+	color: #fffefa;
+	background-color: #ab2929;
+	height: 125vh;
+	z-index: 1;
+
+	.underline {
+		background-color: #fffefa;
+	}
+}
+
+@-webkit-keyframes autofill {
+    0%,100% {
+        background: transparent;
+        -webkit-text-fill-color: transparent !important;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-delay: .1s; /* Safari support - any positive time runs instantly */
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+}
+
+.form {
+
+	margin-top: 10vh;
+	padding-top: 5vh;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.25rem;
+	color: #013a45;
+	width: 66%;
+	height: 75vh;
+
+	background-image: linear-gradient(to top right, #ebe7e1, #fcfbf7 );
+	border: none;
+	box-shadow: -3px 3px 3px 1px rgba(0,0,0,.20),
+				4px -4px 3px 1px #fcfbf7;
+	border-radius: 5px;
+
+	#name, #email, #message {
+		width: 90%;
+		background-color: transparent;
+		padding-left: 5vw;
+		float: left;
+		margin-top: 4vh;
+		margin-left: 5%;
+		margin-right: 5%;
+		border-top: 1px solid rgba(0,0,0,.20);
+		border-left: none;
+		border-right: none;
+		border-bottom: none;
+
+		&:focus {
+			outline: none;
+		}
+
+	}
+
+	textarea {
+		resize: none;
+		background-color: transparent;
+		padding-left: 5vw;
+		float: left;
+		margin-top: 4vh;
+		border: none;
+		width: 95%;
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+.submit-button {
+	padding: 5px;
+	margin-top: 4vh;
+	background-image: linear-gradient(to top right, #ebe7e1, #fcfbf7 );
+	border: none;
+	box-shadow: -3px 3px 3px 1px rgba(0,0,0,.20),
+				4px -4px 3px 1px #fcfbf7;
+	border-radius: 5px;
+
+	&:hover {
+		color: #fcfbf7;
+		background-image: linear-gradient(to top right, #ab2929, #db3030);	
+	}
+
+	&:active {
+	color: #deddd9;
+	box-shadow: 2px -2px 3px 1px rgba(0,0,0,.10),
+				-5px 5px 3px 1px #fffefa;
+	background-image: linear-gradient(to bottom left, #962323, #c22929);		
+	}
+
+	&:focus{
+		outline: 0;		
+	}
+}

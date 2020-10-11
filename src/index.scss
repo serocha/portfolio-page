@@ -99,4 +99,18 @@ body {
   transition: opacity 0.9s, transform 0.9s;
 }
 
+.pop-in {
+  transform: scale(.7, .7);
+  opacity: 0;
+}
+
+.pop-in-start {
+  animation: pop .6s ease forwards;
+}
+
+@keyframes pop {
+  0% {opacity: 0}
+  75% {opacity: 1; transform: scale(1.1, 1.1)}
+  100% {opacity: 1; transform: scale(1, 1)}
+}
 

@@ -10,7 +10,7 @@ const splash = () => (
         <div className='fadeleft'>
           my name is
         </div>
-        <div id='name' className='fadeup' style = { {paddingLeft: '5vw', animationDelay: '2s'} }>
+        <div id='name' className='fadeup' style = { {paddingLeft: '5vw', animationDelay: '1.25s'} }>
           Melissa
         </div>
         <div className='faderight' style={ {paddingLeft: '10vw'} }>
