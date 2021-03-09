@@ -23,7 +23,7 @@ class galleryController extends Component {
 			{id: 4, theme: 'mixed media', title: 'Rodents', desc: 'oil on masonite', src: 'https://static.wixstatic.com/media/50bcfa_7a96481eea0643388b90520810636de0~mv2.jpg'},
 			{id: 5, theme: 'pet portraits', title: 'Max', desc: 'acrylic on canvas', src: 'https://static.wixstatic.com/media/50bcfa_9310ca482b8b47f0a04ad9fd338c43bf~mv2_d_1403_1874_s_2.jpg'},
 			{id: 6, theme: 'mixed media', title: 'The way out', desc: 'oil on masonite', src: 'https://static.wixstatic.com/media/50bcfa_bc57a3e1e2ef44fea23a6f45efecb4f0~mv2.jpg'},
-			{id: 7, theme: 'pet portraits', title: 'Doggo', desc: 'acrylic on canvas', src: 'https://static.wixstatic.com/media/50bcfa_3a9a08800de64e30b9696511d386cbf3~mv2_d_1653_2178_s_2.jpg'},
+			{id: 7, theme: 'pet portraits', title: 'Jo', desc: 'acrylic on canvas', src: 'https://static.wixstatic.com/media/50bcfa_3a9a08800de64e30b9696511d386cbf3~mv2_d_1653_2178_s_2.jpg'},
 			{id: 8, theme: 'mixed media', title: 'Vend', desc: 'fabric', src: 'https://static.wixstatic.com/media/50bcfa_a19521ffb17d43d493365f61393e5102~mv2_d_2553_3606_s_4_2.jpg'},
 			{id: 9, theme: 'pet portraits', title: 'Percy', desc: 'acrylic on mixed media paper', src: 'https://static.wixstatic.com/media/50bcfa_dd28dd7657fc4d689ffc0655324b31d0~mv2.jpg'},
 			{id: 10, theme: 'mixed media', title: 'Take a Nap', desc: 'paper, yarn, and cloth', src: 'https://static.wixstatic.com/media/50bcfa_a68246259ed548e1b84fb1a7c523c893~mv2_d_3648_2736_s_4_2.jpg'},
@@ -98,10 +98,10 @@ class galleryController extends Component {
 				<PopIn targetid='gal-buttons' offset='50%'>
 					<Row id='gal-buttons' className='pop-in justify-content-center'>
 						<Col xs={3}>
-							<button className={styles.button} onClick={ () => this.imageKeyHandler('pet portraits') } >pet portraits</button>
+							<button className={styles.button} onClick={ () => this.imageKeyHandler('pet portraits') } >pets</button>
 						</Col>
 						<Col xs={3}>
-							<button className={styles.button} onClick={ () => this.imageKeyHandler('mixed media') } >mixed media</button>
+							<button className={styles.button} onClick={ () => this.imageKeyHandler('mixed media') } >gallery</button>
 						</Col>
 					</Row>
 				</PopIn>
